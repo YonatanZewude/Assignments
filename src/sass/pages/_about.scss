@@ -1,0 +1,95 @@
+@use "../abstracts/mixins" as m;
+
+
+
+
+.aboutPage {
+    @include m.aboutPage;
+
+}
+
+h3 {
+    text-align: center;
+}
+
+
+
+h1 {
+
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.parentOf_AllTeam {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textQuote:before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 27px;
+    background-image: url(../img/assets/quote.png);
+    background-size: cover;
+    background-color: black;
+    background-position: center center;
+    mix-blend-mode: multiply;
+}
+
+
+.rakibParentDiv {
+    @include m.parentDiv;
+}
+
+.rakibImgDiv .rakib {
+    @include m.imgOfTeam;
+}
+
+.rakibTextDiv {
+    @include m.descriptionOfTeam;
+}
+
+.alexandraParentDiv {
+    @include m.parentDiv;
+}
+
+.alexandraImgDiv .alexandra {
+    @include m.imgOfTeam;
+}
+
+.alexandraTextDiv {
+    @include m.descriptionOfTeam;
+}
+
+
+.lasseParentDiv {
+    @include m.parentDiv;
+}
+
+.lasseImgDiv .lasse {
+    @include m.imgOfTeam;
+}
+
+.lasseTextDiv {
+    @include m.descriptionOfTeam;
+}
+
+.sebastianParentDiv {
+    @include m.parentDiv;
+}
+
+.sebastianImgDiv .sebastian {
+    @include m.imgOfTeam;
+}
+
+.sebastianTextDiv {
+    @include m.descriptionOfTeam;
+}

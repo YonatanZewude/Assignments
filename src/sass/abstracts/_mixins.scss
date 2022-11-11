@@ -1,0 +1,231 @@
+@use "variables";
+
+
+@mixin homePage {
+  background-image: url(../img/assets/negative-space-black-forest-dawn.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  border: none;
+}
+
+@mixin Welcome {
+  text-align: center;
+}
+
+@mixin textFirstPage {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  position: absolute;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include desktop {}
+}
+
+@mixin desktop {
+  @media screen and (min-width: variables.$desktop) {
+    @content;
+  }
+}
+
+/*Home page styles end*/
+
+@mixin aboutPage {
+  background: rgb(255, 255, 255);
+  height: 205vh;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 70px;
+  border: 0;
+  padding: 0;
+
+  @include desktopAbout {
+    height: 130vh;
+    width: 100%;
+
+    .desktopView {
+      display: flex;
+      flex-direction: row;
+      gap: 250px;
+    }
+
+    .desktopViewTwo {
+      display: flex;
+      flex-direction: row;
+      gap: 250px;
+    }
+  }
+}
+
+@mixin desktopAbout {
+  @media screen and (min-width: variables.$desktop) {
+    @content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: auto;
+    margin-top: auto;
+    display: inline;
+  }
+}
+
+@mixin parentDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+@mixin imgOfTeam {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  box-shadow: 0 0 20px 1px rgb(146, 146, 146);
+
+  @include desktopImg {
+    height: 250px;
+    width: 250px;
+    margin-bottom: 0;
+  }
+}
+
+@mixin desktopImg {
+  @media screen and (min-width: variables.$desktop) {
+    @content;
+  }
+}
+
+@mixin descriptionOfTeam {
+  height: 100px;
+  width: 250px;
+  padding: 20px;
+  background: rgb(230, 228, 228);
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+  @include desktopabout {}
+}
+
+@mixin desktopabout {
+  @media screen and (min-width: variables.$desktop) {
+    @content;
+    height: 80px;
+    width: 400px;
+    background: rgb(203, 201, 201);
+    color: black;
+  }
+
+}
+
+@mixin footer {
+  width: 100%;
+  height: 70vh;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  display: flex;
+  justify-content: center;
+
+  @include desktopFooter {}
+}
+
+
+@mixin desktopFooter {
+  @media screen and (min-width: variables.$desktop) {
+    @content;
+    height: 200px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    margin-top: 30px;
+    margin-bottom: auto;
+
+  }
+}
+
+@mixin contactDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px;
+
+  @include desktopContactDiv {}
+
+}
+
+@mixin desktopContactDiv {
+  @media screen and (min-width: variables.$desktop) {
+    @content;
+    height: 200px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@mixin top_arrow {
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  margin-top: 180%;
+  margin-left: 50%;
+  margin-right: 50%;
+
+  @include top_arrow_desktop {}
+
+}
+
+@mixin top_arrow_desktop {
+  @media screen and (min-width: variables.$desktop) {
+    @content;
+    color: rgb(255, 255, 255);
+    margin-top: auto;
+    position: relative;
+    margin-left: 50%;
+    margin-right: 50%;
+    top: 36rem;
+
+  }
+}
+
+@mixin bottom_arrow {
+  color: black;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin-left: 50%;
+  margin-right: 50%;
+
+  @include bottom_arrow_desktop {}
+}
+
+@mixin bottom_arrow_desktop {
+  @media screen and (min-width: variables.$desktop) {
+    @content;
+    color: black;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    margin-left: 50%;
+    margin-right: 50%;
+  }
+}

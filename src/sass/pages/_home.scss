@@ -1,0 +1,23 @@
+@use "../abstracts/mixins" as m;
+
+
+.homeDiv {
+  @include m.homePage;
+}
+
+
+.home_text {
+  @include m.textFirstPage;
+}
+
+.home_h1 {
+  @include m.Welcome;
+}
+
+.fa-solid {
+  @include m.top_arrow
+}
+
+.fa-regular {
+  @include m.bottom_arrow
+}

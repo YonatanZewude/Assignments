@@ -1,0 +1,31 @@
+@use "../abstracts/mixins" as m;
+
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{overflow-y: hidden;}
+
+
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.footer {
+    @include m.footer;
+
+}

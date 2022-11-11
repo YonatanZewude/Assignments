@@ -1,0 +1,20 @@
+@use "../abstracts/mixins" as m;
+
+
+
+#contactDiv {
+    @include m.contactDiv;
+}
+
+.lastDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 14px;
+}
+
+.footerIcon {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
