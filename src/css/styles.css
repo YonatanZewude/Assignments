@@ -1,6 +1,6 @@
 /*Home page styles end*/
 .homeDiv {
-  background-image: url(../img/assets/negative-space-black-forest-dawn.jpg);
+  background-image: url("../img/assets/negative-space-black-forest-dawn.jpg");
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
