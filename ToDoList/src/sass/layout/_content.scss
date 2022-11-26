@@ -5,6 +5,7 @@
     height: auto;
     margin: auto;
     margin-top: 30px;
+    padding-bottom: 10px;
     border-radius: 20px;
 }
 
@@ -25,11 +26,14 @@ ul {
 }
 
 ul li {
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
     list-style-type: none;
     padding: 10px 8px 10px 30px;
     font-size: 20px;
     cursor: pointer;
-    background: #8d99ae;
+    background: #2b2d42;
     margin-top: 15px;
     border-radius: 15px;
     color: white;  
@@ -45,16 +49,4 @@ ul li.checked {
     text-decoration: line-through;
   }
 
- 
-.deleteButton{
-    
-    text-align: center;
-    font-size: 20px;
-    width: 15%;
-    background: #2b2d42;
-    color: rgb(251, 249, 249);
-    float:right;
-    cursor: pointer;
-    border-radius: 15px;
-    border: 0;}
 

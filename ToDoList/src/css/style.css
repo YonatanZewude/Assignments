@@ -12,6 +12,7 @@ h1 {
   height: auto;
   margin: auto;
   margin-top: 30px;
+  padding-bottom: 10px;
   border-radius: 20px;
 }
 
@@ -31,11 +32,14 @@ ul {
 }
 
 ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   list-style-type: none;
   padding: 10px 8px 10px 30px;
   font-size: 20px;
   cursor: pointer;
-  background: #8d99ae;
+  background: #2b2d42;
   margin-top: 15px;
   border-radius: 15px;
   color: white;
@@ -51,23 +55,11 @@ ul li.checked {
   text-decoration: line-through;
 }
 
-.deleteButton {
-  text-align: center;
-  font-size: 20px;
-  width: 15%;
-  background: #2b2d42;
-  color: rgb(251, 249, 249);
-  float: right;
-  cursor: pointer;
-  border-radius: 15px;
-  border: 0;
-}
-
 #newTask {
   background: #ffffff;
   margin-top: 15px;
   margin-left: 30px;
-  width: 70%;
+  width: 65%;
   font-size: 20px;
   padding: 10px;
   float: left;
@@ -78,6 +70,7 @@ ul li.checked {
 .add_task_button {
   padding: 10px;
   margin-top: 15px;
+  margin-left: 5px;
   text-align: center;
   font-size: 20px;
   width: 15%;
@@ -90,9 +83,29 @@ ul li.checked {
 }
 
 .add_task_button:hover {
-  background: #a8dadc;
+  background: #ffffff;
   color: black;
   border: 0;
 }
 
-/*# sourceMappingURL=main.css.map */
+.remove-btn {
+  padding: 2px;
+  text-align: center;
+  font-size: 18px;
+  width: 100px;
+  background: transparent;
+  color: white;
+  float: left;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 0;
+  font-weight: lighter;
+}
+
+.remove-btn:hover {
+  background: #eb7d6c;
+  color: black;
+  border: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
