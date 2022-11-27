@@ -47,15 +47,21 @@ function changeTasksToDone(click_event) {
 }
 
 //Add new tasks to the todo list
-document.getElementById("btn").addEventListener("click", function () {
+document.getElementById("btn").addEventListener("click", addNewTask);
+document.getElementById("newTask").addEventListener("keyup", function (event) {
+  console.log("Some key pressed");
+  if (event.key === "Enter") {
+    document.getElementById("btn").click();
+  }
+});
+
+function addNewTask() {
   let inputText = document.getElementById("newTask").value;
   if (inputText.trim() == "") {
     alert("Oopps TODO task should be provided!");
   } else {
     let btn = document.createElement("button");
-    btn.id =
-      "remove-btn-" +
-      document.getElementById("theUl").getElementsByTagName("li").length;
+    btn.id = "remove-btn-" + document.getElementsByTagName("li").length;
     btn.className = "remove-btn";
     btn.innerHTML = "DELETE";
 
@@ -66,10 +72,10 @@ document.getElementById("btn").addEventListener("click", function () {
     li.appendChild(btn);
     document.getElementById("theUl").appendChild(li);
   }
-});
+}
 
+//Delete list elements when delete is clicked
 let ulElements = document.getElementById("theUl");
-
 ulElements.addEventListener("click", function (evt) {
   let listOfButtons = document
     .getElementById("theUl")
